@@ -20,10 +20,11 @@ $chatter_zone_width: 35%;
 
 // Support for long titles
 @include media-breakpoint-up(md) {
-    .o_form_view .oe_button_box + .oe_title,
-    .o_form_view .oe_button_box + .oe_avatar + .oe_title {
+
+    .o_form_view .oe_button_box+.oe_title,
+    .o_form_view .oe_button_box+.oe_avatar+.oe_title {
         /* Button-box has a hardcoded width of 132px per button and have three columns */
-        width: calc(100% - 450px);
+        width: calc(100% - 100px);
     }
 }
 
@@ -34,7 +35,7 @@ $chatter_zone_width: 35%;
         display: flex;
 
         // Remove clutter to only have small icons that fit in a small screen
-        > .dropdown {
+        >.dropdown {
             display: flex;
 
             .navbar-toggler {
@@ -81,7 +82,7 @@ $chatter_zone_width: 35%;
                 }
             }
 
-            > li,
+            >li,
             .o_menu_entry_lvl_1,
             .o_menu_header_lvl_1 {
                 // Homogeneous background color
@@ -131,17 +132,20 @@ $chatter_zone_width: 35%;
         }
     }
 }
+
 .o_main_navbar {
     color: color-yiq($o-brand-odoo);
 
-    > ul > li > a,
-    > ul > li > label {
+    >ul>li>a,
+    >ul>li>label {
         color: color-yiq($o-brand-odoo);
     }
+
     .dropdown-menu.show {
         max-height: calc(100vh - #{$o-navbar-height});
     }
 }
+
 // Iconized full screen apps menu
 .o_menu_apps {
     user-select: none;
@@ -163,11 +167,9 @@ $chatter_zone_width: 35%;
         visibility: hidden;
         transition: visibility 100ms ease, opacity 100ms ease;
         background: url("../img/home-menu-bg-overlay.svg"),
-            linear-gradient(
-                to bottom,
+            linear-gradient(to bottom,
                 $o-brand-odoo,
-                desaturate(lighten($o-brand-odoo, 20%), 15)
-            );
+                desaturate(lighten($o-brand-odoo, 20%), 15));
         background-size: cover;
         border-radius: 0;
         // Display apps in a grid
@@ -207,9 +209,11 @@ $chatter_zone_width: 35%;
 
             // Size depends on screen
             width: 33.33333333%;
+
             @include media-breakpoint-up(sm) {
                 width: 25%;
             }
+
             @include media-breakpoint-up(md) {
                 width: 16.6666666%;
             }
@@ -221,7 +225,7 @@ $chatter_zone_width: 35%;
         }
 
         // Hide app icons when searching
-        .has-results ~ .o_app {
+        .has-results~.o_app {
             display: none;
         }
 
@@ -236,6 +240,7 @@ $chatter_zone_width: 35%;
             font-size: 1.25rem;
             text-shadow: 1px 1px 1px rgba(gray("black"), 0.4);
         }
+
         // Search input for menus
         .form-row {
             width: 100%;
@@ -297,9 +302,11 @@ $chatter_zone_width: 35%;
                 }
             }
         }
+
         // Allow to scroll only on results, keeping static search box above
         .search-container.has-results {
             height: 100%;
+
             .search-results {
                 max-height: calc(100vh - 47px - 6em);
                 overflow-y: hidden;
@@ -330,6 +337,7 @@ html .o_web_client .o_action_manager .o_action {
 // Control panel (breadcrumbs, search box, buttons...)
 @include media-breakpoint-down(sm) {
     .o_control_panel {
+
         // Arrange buttons to use space better
         .breadcrumb,
         .o_cp_buttons,
@@ -337,6 +345,7 @@ html .o_web_client .o_action_manager .o_action {
         .o_cp_right,
         .o_cp_searchview {
             flex: 1 1 100%;
+
             @include media-breakpoint-up(md) {
                 flex-basis: 50%;
             }
@@ -464,6 +473,7 @@ html .o_web_client .o_action_manager .o_action {
                 overflow: hidden;
                 width: initial;
             }
+
             span:active {
                 white-space: normal;
             }
@@ -486,8 +496,8 @@ html .o_web_client .o_action_manager .o_action {
                 max-width: 100%;
             }
 
-            .oe_button_box + .oe_title,
-            .oe_button_box + .oe_avatar + .oe_title {
+            .oe_button_box+.oe_title,
+            .oe_button_box+.oe_avatar+.oe_title {
                 width: 100%;
             }
 
@@ -514,9 +524,11 @@ html .o_web_client .o_action_manager .o_action {
                     radius: 0;
                     top: 0;
                 }
+
                 height: 100%;
             }
-            .o_statusbar_buttons > .btn {
+
+            .o_statusbar_buttons>.btn {
                 border-radius: 0;
                 border: 0;
                 width: 100%;
@@ -528,6 +540,7 @@ html .o_web_client .o_action_manager .o_action {
             }
 
             .o_statusbar_status {
+
                 // Arrow from rightmost button exceeds allowed width
                 .o_arrow_button:first-child::before {
                     content: none;
@@ -559,13 +572,14 @@ html .o_web_client .o_action_manager .o_action {
                     .o_composer_button_send {
                         display: initial !important; // Forced in core
                     }
+
                     .o_chatter_avatar {
                         display: none;
                     }
                 }
 
                 .o_chatter_topbar {
-                    > .o_topbar_right_area {
+                    >.o_topbar_right_area {
                         flex: 1 0 auto;
                         flex-wrap: wrap;
                         max-width: 100%;
@@ -596,7 +610,7 @@ html .o_web_client .o_action_manager .o_action {
                     flex: 1 1 auto;
                     overflow: auto;
 
-                    > .o_form_sheet {
+                    >.o_form_sheet {
                         min-width: unset;
                     }
                 }
@@ -618,13 +632,16 @@ html .o_web_client .o_action_manager .o_action {
                         // Scrollable input text to avoid hide conversation & buttons
                         .o_composer_text_field {
                             max-height: 120px;
-                            overflow-y: auto !important; /* Forced because Odoo uses inline style */
+                            overflow-y: auto !important;
+                            /* Forced because Odoo uses inline style */
                         }
+
                         .o_attachments_list {
                             overflow: auto;
                             max-height: $o-mail-attachment-image-size * 3;
                             margin-top: 0.4em;
                         }
+
                         .o_attachments_previews {
                             overflow: auto;
                             max-height: $o-mail-attachment-image-size * 6;
@@ -640,6 +657,7 @@ html .o_web_client .o_action_manager .o_action {
 .o_list_view {
     .table-responsive {
         .o_list_table {
+
             // th & td are here for compatibility with chrome
             thead,
             thead tr:nth-child(1) th {
@@ -647,14 +665,17 @@ html .o_web_client .o_action_manager .o_action {
                 top: 0;
                 z-index: 1;
             }
+
             thead tr:nth-child(1) th {
                 background-color: $o-list-footer-bg-color;
             }
+
             tfoot,
             tfoot tr:nth-child(1) td {
                 position: sticky;
                 bottom: 0;
             }
+
             tfoot tr:nth-child(1) td {
                 background-color: $o-list-footer-bg-color;
             }
@@ -674,6 +695,7 @@ html .o_web_client .o_action_manager .o_action {
         z-index: 10;
 
         &.o_responsive_document_viewer {
+
             /* Show sided viewer on large screens */
             @include media-breakpoint-up(lg) {
                 width: $chatter_zone_width;
@@ -685,6 +707,7 @@ html .o_web_client .o_action_manager .o_action {
                 &:hover .o_viewer_toolbar {
                     display: flex;
                 }
+
                 .arrow,
                 .o_viewer_toolbar {
                     display: none;
@@ -703,12 +726,15 @@ html .o_web_client .o_action_manager .o_action {
                 display: none;
             }
         }
+
         &:not(.o_responsive_document_viewer) {
             .o_maximize_btn {
                 display: none;
             }
         }
+
         @include media-breakpoint-down(lg) {
+
             .o_minimize_btn,
             .o_maximize_btn {
                 display: none;
@@ -716,13 +742,16 @@ html .o_web_client .o_action_manager .o_action {
         }
     }
 }
+
 /* Max/Min buttons only are usefull in sided mode */
 .o_web_client:not(.o_chatter_position_sided) {
+
     .o_minimize_btn,
     .o_maximize_btn {
         display: none;
     }
 }
+
 // Apply improvements for Document Viewer on all modes
 .o_modal_fullscreen .o_viewer_content {
     .o_viewer-header {
@@ -736,7 +765,7 @@ html .o_web_client .o_action_manager .o_action {
             text-align: right;
 
             // Now close button ('X') it's a fa-icon
-            > .o_close_btn {
+            >.o_close_btn {
                 top: unset;
                 left: unset;
                 bottom: unset;

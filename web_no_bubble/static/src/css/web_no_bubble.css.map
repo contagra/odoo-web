@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,UADM,AACL,WAAW,CAAC;EACT,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "web_no_bubble.scss"
+    ],
+    "names": [],
+    "file": "web_no_bubble.css"
+}

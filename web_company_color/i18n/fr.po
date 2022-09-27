@@ -4,55 +4,55 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-09-26 15:07+0000\n"
-"Last-Translator: Alessandro Uffreduzzi <alessandro.uffreduzzi@pytech.it>\n"
+"PO-Revision-Date: 2022-09-19 08:11+0000\n"
+"Last-Translator: Claude R Perrin <claude@perrin.it>\n"
 "Language-Team: none\n"
-"Language: it\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: web_company_color
 #: model_terms:ir.ui.view,arch_db:web_company_color.view_company_form
 msgid ""
 "<span class=\"fa fa-info fa-2x\"/>\n"
-"                        In order for the changes to take effect, please "
-"refresh\n"
+"                        In order for the changes to take effect, please refresh\n"
 "                        the page."
 msgstr ""
 "<span class=\"fa fa-info fa-2x\"/>\n"
-"                        Perché i cambiamenti abbiano effetto, prego "
-"aggiornare la pagina."
+"                        Pour que les modifications prennent effet, veuillez "
+"recharger\n"
+"                        la page."
 
 #. module: web_company_color
 #: model:ir.model,name:web_company_color.model_res_company
 msgid "Companies"
-msgstr "Aziende"
+msgstr "Sociétés"
 
 #. module: web_company_color
 #: model:ir.model.fields,field_description:web_company_color.field_res_company__company_colors
 msgid "Company Colors"
-msgstr "Colori Aziendali"
+msgstr "Couleurs de la société"
 
 #. module: web_company_color
 #: model_terms:ir.ui.view,arch_db:web_company_color.view_company_form
 msgid "Company Styles"
-msgstr "Stili Aziendali"
+msgstr "Styles de société"
 
 #. module: web_company_color
 #: model_terms:ir.ui.view,arch_db:web_company_color.view_company_form
 msgid "Compute colors from logo"
-msgstr "Calcola colori dal logo"
+msgstr "Générer les couleurs à partir du logo"
 
 #. module: web_company_color
 #: model:ir.model.fields,field_description:web_company_color.field_ir_qweb__display_name
 #: model:ir.model.fields,field_description:web_company_color.field_res_company__display_name
 msgid "Display Name"
-msgstr "Nome visualizzato"
+msgstr "Nom affiché"
 
 #. module: web_company_color
 #: model:ir.model.fields,field_description:web_company_color.field_ir_qweb__id
@@ -64,27 +64,27 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:web_company_color.field_ir_qweb____last_update
 #: model:ir.model.fields,field_description:web_company_color.field_res_company____last_update
 msgid "Last Modified on"
-msgstr "Ultima modifica il"
+msgstr "Dernière modification le"
 
 #. module: web_company_color
 #: model:ir.model.fields,field_description:web_company_color.field_res_company__color_navbar_bg
 msgid "Navbar Background Color"
-msgstr "Sfondo Barra Navigazione"
+msgstr "Couleur de l’arrière-plan de la barre de navigation"
 
 #. module: web_company_color
 #: model:ir.model.fields,field_description:web_company_color.field_res_company__color_navbar_bg_hover
 msgid "Navbar Background Color Hover"
-msgstr "Colore Hover Sfondo Barra Navigazione"
+msgstr "Couleur d'arrière-plan de la barre de navigation au survol"
 
 #. module: web_company_color
 #: model_terms:ir.ui.view,arch_db:web_company_color.view_company_form
 msgid "Navbar Colors"
-msgstr "Colori Barra Navigazione"
+msgstr "Couleurs de la barre de navigation"
 
 #. module: web_company_color
 #: model:ir.model.fields,field_description:web_company_color.field_res_company__color_navbar_text
 msgid "Navbar Text Color"
-msgstr "Colori Testo Barra Navigazione"
+msgstr "Couleur du texte de la barre de navigation"
 
 #. module: web_company_color
 #: model:ir.model,name:web_company_color.model_ir_qweb

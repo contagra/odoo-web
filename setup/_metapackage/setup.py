@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo-addon-web_action_conditionable>=16.0dev,<16.1dev',
         'odoo-addon-web_advanced_search>=16.0dev,<16.1dev',
+        'odoo-addon-web_apply_field_style>=16.0dev,<16.1dev',
         'odoo-addon-web_chatter_position>=16.0dev,<16.1dev',
         'odoo-addon-web_company_color>=16.0dev,<16.1dev',
         'odoo-addon-web_dark_mode>=16.0dev,<16.1dev',
@@ -36,6 +37,7 @@ setuptools.setup(
         'odoo-addon-web_timeline>=16.0dev,<16.1dev',
         'odoo-addon-web_tree_many2one_clickable>=16.0dev,<16.1dev',
         'odoo-addon-web_widget_bokeh_chart>=16.0dev,<16.1dev',
+        'odoo-addon-web_widget_dropdown_dynamic>=16.0dev,<16.1dev',
         'odoo-addon-web_widget_numeric_step>=16.0dev,<16.1dev',
         'odoo-addon-web_widget_open_tab>=16.0dev,<16.1dev',
         'odoo-addon-web_widget_plotly_chart>=16.0dev,<16.1dev',

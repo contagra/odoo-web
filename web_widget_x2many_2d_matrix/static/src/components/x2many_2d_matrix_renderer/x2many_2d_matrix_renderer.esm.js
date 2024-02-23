@@ -133,16 +133,25 @@ export class X2Many2DMatrixRenderer extends Component {
     getValueFieldProps(column, row) {
         const x = this.columns.findIndex((c) => c.value === column);
         const y = this.rows.findIndex((r) => r.value === row);
-        const props = this.list.activeFields[this.matrixFields.value].props;
-        const propsFromAttrs =
-            this.list.activeFields[this.matrixFields.value].propsFromAttrs;
-        const record = this.matrix[y][x].records[0];
-        let value = this.matrix[y][x].value;
-        if (!this._canAggregate()) {
-            value = record.data[this.matrixFields.value];
+        const {props, propsFromAttrs} = this.list.activeFields[this.matrixFields.value];
+        let record = null;
+        let value = null;
+        if (
+            this.matrix[y] &&
+            this.matrix[y][x] &&
+            (record = this.matrix[y][x].records[0])
+        ) {
+            record = this.matrix[y][x].records[0];
+            value = this.matrix[y][x].value;
         }
-
-        return {
+        if (this.list.fields[this.matrixFields.value].type === "boolean") {
+            record.bypass_readonly = true;
+        }
+        value =
+            !this._canAggregate() && record
+                ? record.data[this.matrixFields.value]
+                : value;
+        const result = {
             ...props,
             ...propsFromAttrs,
             value: value,
@@ -151,6 +160,10 @@ export class X2Many2DMatrixRenderer extends Component {
             record: record,
             name: this.matrixFields.value,
         };
+        if (value === null) {
+            result.readonly = true;
+        }
+        return result;
     }
 }
 
